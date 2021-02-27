@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <!-- <link rel="stylesheet" href="reset.css" type="text"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<header>
+    <div id="high-scores" class="btn">
+        <a href="highscores.html">View Highscores</a>
+    </div>    
+    
+    <div id="timer">
+        Time: <span id="countdown">30</span>
+    </div> 
+</header>
+
+<body>
+
+    <div id="card">
+        <div id="start-page">
+            <div id="home">
+                <h1>JS FUNDAMENTALS QUIZ</h1>
+                <p>You will have 30 seconds to finish a multiple choice quiz on JavaScript. Get ready!</p>
+                <button id="start-btn" class="btn">START QUIZ</button>
+            </div>
+        </div>
+
+        <div id="question-container" class="hide">
+            <div id="question">QUESTION</div>
+            <div id="answer-buttons">
+                <button class="btn">ANSWER1</button>
+                <button class="btn">ANSWER2</button>
+                <button class="btn">ANSWER3</button>
+                <button class="btn">ANSWER4</button>
+            </div>
+
+            <div id="controls">
+                <button id="next-btn" class="next-btn btn hide">NEXT</button>
+            </div>
+            <div class="hide" id="see-score">
+                <button id="see-score-btn">SEE FINAL SCORE</button>
+            </div>
+        </div>
+        
+        <div class="hide" id="end-page">
+            <h2>ALL DONE</h2>
+            <p>Your final score is <span id="final-score"></span></p>
+            <p>Enter initials: <input id="initials" type="text" max="3"></p>
+        </div>
+        
+    </div>
+
+    <div id="highscores-page" class="hide">
+        <ul class="highscores-list">
+        <button id="go-back" class="btn">GO BACK</button>
+        <button id="clear-highscores" class="btn">CLEAR HIGHSCORES</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

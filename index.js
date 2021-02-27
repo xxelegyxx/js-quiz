@@ -5,7 +5,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 // const endGameEl = document.getElementById('end-page')
 // var finalScore = document.getElementById("final-score")
-// const scoreBtn = document.getElementById("see-score-btn")
+const scoreBtn = document.getElementById("see-score-btn")
 
 var countdownEl = document.getElementById("countdown");
 var time = 29;
@@ -18,7 +18,7 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
-//scoreBtn.addEventListener('click', gameOver())
+// scoreBtn.addEventListener('click', allDone())
 
 function startGame() {
   startButton.classList.add('hide')
@@ -27,8 +27,7 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   score = 0
-  
-  setNextQuestion()
+  setNextQuestion();
   countdownStart();
 }
 
@@ -36,6 +35,7 @@ function countdownStart() {
     setInterval(function(){
     if(time <=0) {
         clearInterval(time = 0)
+        allDone();
     }
         countdownEl.innerHTML = time
         time -=1
@@ -45,7 +45,6 @@ function countdownStart() {
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
-
 }
 
 function showQuestion(question) {
@@ -61,6 +60,9 @@ function showQuestion(question) {
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
   })
+  if(currentQuestionIndex == 3) {
+    allDone();
+  } 
 }
 
 function resetState() {
@@ -138,3 +140,7 @@ const questions = [
       ]
     }
 ]
+
+function allDone() {
+  scoreBtn.classList.remove('hide')
+}

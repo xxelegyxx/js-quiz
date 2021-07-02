@@ -2,7 +2,7 @@
 # JAVASCRIPT QUIZ
 week 4 HW assignment
 
-![](
+![](https://github.com/xxelegyxx/js-quiz/blob/main/Screenshot.png)
 
 ## :newspaper: Description 
 The following files contain the assets necessary to deploy a multiple choice quiz. The site is optimized using industry-recognized best practices for SEO and Semantic HTML5.

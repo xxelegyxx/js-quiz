@@ -1,13 +1,8 @@
-### **NOTE** <br>
-This code is unfinished. I could not figure out how to - <br>
-#### Timer interaction with wrong answers
-#### Scoreboard
-#### Show/unhide final page
-#### Style quiz in center of page <br>
-Thank you for your understanding. I will be going over the coursework to have a better understanding of this functionality
 
 # JAVASCRIPT QUIZ
 week 4 HW assignment
+
+![](
 
 ## :newspaper: Description 
 The following files contain the assets necessary to deploy a multiple choice quiz. The site is optimized using industry-recognized best practices for SEO and Semantic HTML5.
